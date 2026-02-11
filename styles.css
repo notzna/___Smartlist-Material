@@ -1,0 +1,233 @@
+:root {
+  --color-on-surface: #1d1b20;
+  --color-outline: #79747e;
+  --color-outline-variant: #cac4d0;
+  --color-on-surface-variant: #49454f;
+  --color-on-primary: #ffffff;
+  --color-primary: #6750a4;
+  --color-surface-tint: #6750a4;
+
+  --font-display-small: system-ui, -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+  --font-title-medium: system-ui, -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+  --font-body-large: system-ui, -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body-large);
+  background-color: #f5f0ff;
+  color: var(--color-on-surface);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 412px;
+  height: 954px;
+  border-radius: 28px;
+  background-color: #ffffff;
+  padding: 75px 16px 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 24px;
+  background-color: var(--color-surface-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.card-heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.headline {
+  margin: 0;
+  font-family: var(--font-display-small);
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--color-on-surface);
+}
+
+.subhead {
+  margin: 0;
+  font-family: var(--font-title-medium);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  color: var(--color-outline);
+}
+
+.provider-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.btn {
+  border-radius: 100px;
+  padding: 16px 24px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-title-medium);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.btn-outline {
+  border: 1px solid var(--color-outline-variant);
+  color: var(--color-on-surface-variant);
+  background-color: transparent;
+}
+
+.btn-outline:hover {
+  background-color: rgba(103, 80, 164, 0.04);
+}
+
+.btn-filled {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.btn-filled:hover {
+  background-color: #5c46a1;
+}
+
+.btn-icon img {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.btn-apple .btn-icon img,
+.btn-google .btn-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.btn-apple,
+.btn-google {
+  color: var(--color-on-surface);
+}
+
+.btn-label {
+  white-space: nowrap;
+}
+
+.divider-text {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-title-medium);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  color: var(--color-outline);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  width: 100%;
+}
+
+.field-input {
+  width: 100%;
+  height: 48px;
+  padding: 4px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--color-outline);
+  font-family: var(--font-body-large);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: var(--color-on-surface);
+}
+
+.field-input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 0;
+  border-color: var(--color-primary);
+}
+
+.field-input::placeholder {
+  color: var(--color-outline);
+}
+
+.footer-text {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-title-medium);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  color: var(--color-outline);
+}
+
+.footer-link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+@media (min-height: 720px) {
+  .card {
+    margin-block: 40px;
+  }
+}
+
