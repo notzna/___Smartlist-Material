@@ -421,13 +421,69 @@ a.btn {
   color: var(--color-on-surface);
 }
 
+.inventory-item-actions {
+  position: relative;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
 .inventory-item .icon-btn {
   flex-shrink: 0;
   align-self: flex-start;
   color: #49454f;
 }
 
+.inventory-item .icon-btn img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
 .inventory-item .icon-btn svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.item-toolbar {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 20;
+}
+
+.item-toolbar[hidden] {
+  display: none !important;
+}
+
+.item-toolbar-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #49454f;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.item-toolbar-btn:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.item-toolbar-btn img {
   display: block;
   width: 24px;
   height: 24px;
