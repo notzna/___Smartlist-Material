@@ -248,7 +248,7 @@ a.btn {
 .dashboard-card {
   width: 100%;
   max-width: 412px;
-  min-height: 954px;
+  height: 954px;
   border-radius: 28px;
   background-color: #ffffff;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
@@ -260,7 +260,6 @@ a.btn {
 
 .dashboard-header {
   flex-shrink: 0;
-  border-bottom: 1px solid var(--color-outline-variant);
   padding: 16px 16px 20px;
 }
 
@@ -345,19 +344,40 @@ a.btn {
   flex: 1;
   overflow: auto;
   padding-bottom: 88px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.inventory-list::-webkit-scrollbar {
+  display: none;
 }
 
 .inventory-item {
+  position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
-  padding: 16px;
-  border-bottom: 1px solid var(--color-outline-variant);
-  min-height: 96px;
+  padding: 16px 16px 32px;
+  margin-bottom: 16px;
+  min-height: 135px;
+}
+
+.inventory-item::after {
+  content: '';
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  height: 1px;
+  background: #cac4d0;
 }
 
 .inventory-item:last-child {
-  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.inventory-item:last-child::after {
+  display: none;
 }
 
 .inventory-item-img {
@@ -379,11 +399,11 @@ a.btn {
 
 .inventory-item-title {
   margin: 0;
-  font-family: var(--font-title-medium);
+  font-family: 'Roboto', var(--font-body-large);
   font-size: 16px;
-  line-height: 22px;
-  font-weight: 600;
-  letter-spacing: 0.15px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
   color: var(--color-on-surface);
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -393,24 +413,36 @@ a.btn {
 
 .inventory-item-price {
   margin: 0;
-  font-family: var(--font-body-large);
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  letter-spacing: 0.25px;
-  color: var(--color-on-surface-variant);
+  font-family: 'Roboto', var(--font-title-medium);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  color: var(--color-on-surface);
+}
+
+.inventory-item .icon-btn {
+  flex-shrink: 0;
+  align-self: flex-start;
+  color: #49454f;
+}
+
+.inventory-item .icon-btn svg {
+  display: block;
+  width: 24px;
+  height: 24px;
 }
 
 .inventory-tag {
   display: inline-block;
-  margin-top: 6px;
-  padding: 2px 10px;
+  margin-top: 4px;
+  padding: 4px 10px;
   border-radius: 100px;
-  font-family: var(--font-title-medium);
+  font-family: 'Roboto', var(--font-body-large);
   font-size: 12px;
-  line-height: 20px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
   color: #fff;
   width: fit-content;
 }
@@ -451,6 +483,9 @@ a.btn {
   outline-offset: 2px;
 }
 
-.fab svg {
+.fab svg,
+.fab img {
   display: block;
+  width: 28px;
+  height: 28px;
 }
