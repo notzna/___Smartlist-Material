@@ -139,6 +139,10 @@ body {
   background-color: #5c46a1;
 }
 
+a.btn {
+  text-decoration: none;
+}
+
 .btn-icon img {
   display: block;
   width: 18px;
@@ -231,3 +235,222 @@ body {
   }
 }
 
+/* ========== Dashboard ========== */
+.dashboard-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background-color: #e6e0e9;
+}
+
+.dashboard-card {
+  width: 100%;
+  max-width: 412px;
+  min-height: 954px;
+  border-radius: 28px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-header {
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--color-outline-variant);
+  padding: 16px 16px 20px;
+}
+
+.dashboard-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.dashboard-header .icon-btn {
+  color: #49454f;
+}
+
+.dashboard-header .icon-btn img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-btn {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-on-surface);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s;
+}
+
+.icon-btn:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.icon-btn svg {
+  display: block;
+}
+
+.icon-btn-profile {
+  color: #49454f;
+}
+
+.dashboard-header-titles {
+  padding: 0;
+}
+
+.dashboard-title {
+  margin: 0;
+  font-family: 'Roboto', var(--font-display-small);
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--color-on-surface);
+  text-align: left;
+}
+
+.dashboard-subtitle {
+  margin: 4px 0 0;
+  font-family: 'Roboto', var(--font-title-medium);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  color: var(--color-primary);
+  text-align: left;
+}
+
+.dashboard-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inventory-list {
+  flex: 1;
+  overflow: auto;
+  padding-bottom: 88px;
+}
+
+.inventory-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid var(--color-outline-variant);
+  min-height: 96px;
+}
+
+.inventory-item:last-child {
+  border-bottom: none;
+}
+
+.inventory-item-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: var(--color-outline-variant);
+}
+
+.inventory-item-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inventory-item-title {
+  margin: 0;
+  font-family: var(--font-title-medium);
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+  color: var(--color-on-surface);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.inventory-item-price {
+  margin: 0;
+  font-family: var(--font-body-large);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+  color: var(--color-on-surface-variant);
+}
+
+.inventory-tag {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-family: var(--font-title-medium);
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #fff;
+  width: fit-content;
+}
+
+.inventory-tag--listed {
+  background-color: var(--color-primary);
+}
+
+.inventory-tag--sold {
+  background-color: #2e7d32;
+}
+
+.fab {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(103, 80, 164, 0.4);
+  text-decoration: none;
+  z-index: 10;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.fab:hover {
+  background-color: #5c46a1;
+  box-shadow: 0 6px 16px rgba(103, 80, 164, 0.45);
+}
+
+.fab:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.fab svg {
+  display: block;
+}
